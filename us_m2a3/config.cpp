@@ -77,6 +77,7 @@ class CfgVehicles
 	class RHS_M2A2_Base: APC_Tracked_03_base_F
 	{
 		armorStructural=5.5;
+		armor=265;
 	};
 	class RHS_M2A2: RHS_M2A2_Base {};
 	class RHS_M2A2_early: RHS_M2A2 {};
