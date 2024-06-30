@@ -9,8 +9,8 @@ This auxillary mod will NOT directly rip or steal other mod content without the 
 
 While this auxillary mod uses DEVRHSUSAF and DEVRHSAFRF for their internal values, this will work with basic RHS versions.
 
-RHSAFRF - https://steamcommunity.com/sharedfiles/filedetails/?id=843425103
-RHSUSAF - https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
+- RHSAFRF - https://steamcommunity.com/sharedfiles/filedetails/?id=843425103
+- RHSUSAF - https://steamcommunity.com/sharedfiles/filedetails/?id=843577117
 
 ## Permissions ##
 
