@@ -34,7 +34,7 @@ class CfgAmmo
 	class rhsusf_ammo_basic_penetrator;
 	class rhs_ammo_M_fgm148_AT: MissileBase	
 	{
-		hit=250;
+		hit=200;
 		class Direct
 		{
 		};
@@ -66,7 +66,7 @@ class CfgAmmo
 	class rhs_ammo_M_fgm148_AT_penetrator: rhsusf_ammo_basic_penetrator
 	{
 		warheadName="TandemHEAT";
-		hit=270;
+		hit=220;
 		caliber=50.666698;
 	};
 };
