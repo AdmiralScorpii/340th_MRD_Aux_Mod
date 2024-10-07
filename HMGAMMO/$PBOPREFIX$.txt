@@ -1,0 +1,4 @@
+//<'HMGAMMO.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=HMGAMMO;
+//PboType=Arma Addon;
+//</properties>

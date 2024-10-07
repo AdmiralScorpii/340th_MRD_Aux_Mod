@@ -1,0 +1,14 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "BWMOD_Armor_Fix"
+        }
+    ]
+}

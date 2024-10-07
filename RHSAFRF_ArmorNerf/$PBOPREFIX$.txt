@@ -1,0 +1,4 @@
+//<'RHSAFRF_ArmorNerf.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=RHSAFRF_ArmorNerf;
+//PboType=Arma Addon;
+//</properties>

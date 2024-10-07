@@ -1,0 +1,4 @@
+//<'RHSSAFArmorFix.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=RHSSAFArmorFix;
+//PboType=Arma Addon;
+//</properties>

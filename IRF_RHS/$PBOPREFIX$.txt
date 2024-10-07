@@ -1,0 +1,4 @@
+//<'IRF_RHS.pbo' properties via Mikero's dos tools, dll version 8.35>
+prefix=IRF_RHS;
+//PboType=Arma Addon;
+//</properties>

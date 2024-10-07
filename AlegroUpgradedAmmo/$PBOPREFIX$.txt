@@ -1,0 +1,4 @@
+//<'AlegroUpgradedAmmo.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=AlegroUpgradedAmmo;
+//PboType=Arma Addon;
+//</properties>

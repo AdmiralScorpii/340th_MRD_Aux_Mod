@@ -1,0 +1,4 @@
+//<'t14fix.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=t14fix;
+//PboType=Arma Addon;
+//</properties>

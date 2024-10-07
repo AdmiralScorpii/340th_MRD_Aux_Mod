@@ -1,0 +1,4 @@
+//<'RHS_Backpack_Fix.pbo' properties via Mikero's dos tools, dll version 9.45>
+prefix=RHS_Backpack_Fix;
+//PboType=Arma Addon;
+//</properties>
