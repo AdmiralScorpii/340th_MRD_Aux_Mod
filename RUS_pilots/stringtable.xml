@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project name="name">
+    <Package name="name">
+        <Container name="RUS_pilots">
+            <Key ID="STR_pilot_suit_blue">
+                <English>Pilot Suit (Blue)</English>
+                <Original>Pilot Suit (Blue)</Original>
+                <Russian>Форма Лётчика (Синяя)</Russian>
+            </Key>
+			<Key ID="STR_pilot_suit_ma">
+                <English>Pilot Suit (Naval Aviation)</English>
+                <Original>Pilot Suit (Naval Aviation)</Original>
+                <Russian>Форма Лётчика (МА ВМФ)</Russian>
+            </Key>
+			<Key ID="STR_pilot_overall_blue">
+                <English>Flying Overall (Blue)</English>
+                <Original>Flying Overall (Blue)</Original>
+                <Russian>Лётный Комбинезон (Синий)</Russian>
+            </Key>
+			<Key ID="STR_pilot_overall_sand">
+                <English>Flying Overall (Sand)</English>
+                <Original>Flying Overall (Sand)</Original>
+                <Russian>Лётный Комбинезон (Пустынный)</Russian>
+            </Key>
+			<Key ID="STR_pilot_overall_ma">
+                <English>Flying Overall (Naval Aviation)</English>
+                <Original>Flying Overall (Naval Aviation)</Original>
+                <Russian>Лётный Комбинезон (МА ВМФ)</Russian>
+            </Key>
+        </Container>
+    </Package>
+</Project>

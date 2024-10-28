@@ -1,0 +1,17 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$",
+            "\\.xml$",
+            "\\.csv$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "LS_Ka52_F"
+        }
+    ]
+}

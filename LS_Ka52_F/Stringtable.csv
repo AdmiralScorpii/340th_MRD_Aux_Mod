@@ -1,0 +1,32 @@
+﻿LANGUAGE,												English,												Russian
+
+// Display Name: ///////////////////////////////////////////////////////////////
+STR_LS_Ka52,											Ka-52 (mod. 2011),										Ка-52 (обр. 2011)
+
+// Weapons: ///////////////////////////////////////////////////////////////
+STR_LS_9k38,											Strelets 9k38,											УР Игла
+
+// Anims: ///////////////////////////////////////////////////////////////
+STR_LS_HIDE_EVU,										Hide exhaust,											Скрыть ЭВУ
+
+// Textures: ///////////////////////////////////////////////////////////////
+STR_LS_Ka52_VVS_standard,								Russian Air Forces (grey nose),							ВВС РФ: темно-серый (серый обтекатель)
+STR_LS_Ka52_VVS_standard_blue,							Russian Air Forces (blue nose),							ВВС РФ: темно-серый (голубой обтекатель)
+STR_LS_Ka52_Vsign,										Russian Air Forces (V-sign),							ВВС РФ: темно-серый (тактический знак V)
+STR_LS_Ka52_VVS_camo_52,								Russian Air Forces camo (52 red),						ВВС РФ: камуфляжный (б/н 52 красный)
+STR_LS_Ka52_VVS_camo_80,								Russian Air Forces camo (80 red),						ВВС РФ: камуфляжный (б/н 80 красный)
+STR_LS_Ka52_VVS_camo_Z1,								Russian Air Forces camo (Z-sign),						ВВС РФ: камуфляжный (тактический знак Z)
+STR_LS_Ka52_Alligator,									Alligator (expo),										Демонстрационный: Аллигатор (б/н 062)
+STR_LS_Ka52_Black_firm,									Kamov black (expo),										Демонстрационный: Камов черный (б/н 061)
+STR_LS_Ka52_Camo_061,									061-yellow camo (expo),									Демонстрационный: камуфляжный (б/н 061)
+STR_LS_Ka52_Digital_desert,								Digital desert,											ВВС РФ: пустынная цифра (несуществующий)
+STR_LS_Ka52_Digital_forest,								Digital forest,											ВВС РФ: лесная цифра (несуществующий)
+STR_LS_Ka52_Egypt,										Egyptian Air Force (313),								ВВС Египта: пустынный (б/н 313)
+STR_LS_Ka52_Factory_tests,								Factory tests (unpainted),								Заводские испытания: неокрашенный
+STR_LS_Ka52_Gray_camo,									Gray camo,												ВВС РФ: серый камуфляж (несуществующий)
+
+// Actions: ///////////////////////////////////////////////////////////////
+STR_LS_Ka52_contour_lights_on,							Contour Lights: On,										Огни контур
+STR_LS_Ka52_contour_lights_off,							Contour Lights: Off,									Огни контур: Откл
+STR_LS_Ka52_form_lights_on,								Formation Lights: On,									Огни строев. 30% 
+STR_LS_Ka52_form_lights_off,							Formation Lights: Off,									Огни строев.: Откл

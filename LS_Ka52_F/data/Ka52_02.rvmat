@@ -1,0 +1,97 @@
+ambient[]={1.000000,1.000000,1.000000,1.000000};
+diffuse[]={1.000000,1.000000,1.000000,1.000000};
+forcedDiffuse[]={0.000000,0.000000,0.000000,0.000000};
+emmisive[]={0.000000,0.000000,0.000000,0.000000};
+specular[]={0.740000,0.740000,0.900000,0.000000};
+specularPower=40.000000;
+PixelShaderID="Super";
+VertexShaderID="Super";
+class Stage1
+{
+	texture="rhsafrf\addons\rhs_a2port_air\ka52\data\Ka52_02_NOHQ.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage2
+{
+	texture="a3\weapons_f\data\detailmaps\metal_rough_dt.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={15.000000,0.000000,0.000000};
+		up[]={0.000000,15.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage3
+{
+	texture="#(argb,8,8,3)color(0,0,0,0,MC)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage4
+{
+	texture="rhsafrf\addons\rhs_a2port_air\ka52\data\ka52_02_AS.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage5
+{
+	texture="rhsafrf\addons\rhs_a2port_air\ka52\data\Ka52_02_SMDI.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage6
+{
+	texture="#(ai,64,64,1)fresnel(0.6,0.15)";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class Stage7
+{
+	texture="a3\data_f\env_land_co.paa";
+	uvSource="tex";
+	class uvTransform
+	{
+		aside[]={1.000000,0.000000,0.000000};
+		up[]={0.000000,1.000000,0.000000};
+		dir[]={0.000000,0.000000,0.000000};
+		pos[]={0.000000,0.000000,0.000000};
+	};
+};
+class StageTI
+{
+	texture = "rhsafrf\addons\rhs_a2port_air\Ka52\Data\ka52_02_ti_ca.tga";
+};
+
