@@ -140,6 +140,7 @@ class CfgVehicles
 	};
 	class Land: AllVehicles
 	{
+		class ACE_SelfActions;
 	};
 	class LandVehicle: Land
 	{
@@ -147,6 +148,9 @@ class CfgVehicles
 	};
 	class Tank: LandVehicle
 	{
+        class ACE_Actions {
+            class ACE_MainActions {};
+        };
 		class NewTurret;
 		class HitPoints;
 		class Turrets
@@ -397,6 +401,53 @@ class CfgVehicles
 			{0,1}
 		};
 		acre_hasInfantryPhone=0;
+		TFAR_hasIntercom = 1;
+		class ACE_SelfActions: ACE_SelfActions
+		{
+			class TFAR_IntercomChannel
+			{
+				displayName="$STR_tfar_core_Intercom_ACESelfAction_Name";
+				condition="true";
+				statement="";
+				icon="";
+				class TFAR_IntercomChannel_disabled
+				{
+					displayName="Disabled";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != -1";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-1,true];";
+				};
+				class TFAR_IntercomChannel_1
+				{
+					displayName="$STR_tfar_core_Intercom_ACESelfAction_Channel1";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 0";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],0,true];";
+				};
+				class TFAR_IntercomChannel_2
+				{
+					displayName="$STR_tfar_core_Intercom_ACESelfAction_Channel2";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 1";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],1,true];";
+				};
+				class TFAR_IntercomChannel_Misc_1
+				{
+					displayName="Misc channel 1";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 2";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],2,true];";
+				};
+				class TFAR_IntercomChannel_Misc_2
+				{
+					displayName="Misc channel 2";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 3";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],3,true];";
+				};
+				class TFAR_IntercomChannel_Misc_3
+				{
+					displayName="Misc channel 3";
+					condition="_vehicle = vehicle ACE_Player; _intercom = _vehicle getVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],-2]; if (_intercom == -2) then {_intercom = _vehicle getVariable ['TFAR_defaultIntercomSlot',TFAR_defaultIntercomSlot]}; _intercom != 4";
+					statement="(vehicle ACE_Player) setVariable [format ['TFAR_IntercomSlot_%1',(netID ACE_Player)],4,true];";
+				};
+			};
+		};
 		class AcreIntercoms
 		{
 			class Intercom_1
@@ -2794,7 +2845,7 @@ class CfgVehicles
 			class CargoInside_Front: CargoInside_Left_1
 			{
 				proxyIndex=7;
-				gunnerName="BMP-2M_CargoFront";
+				gunnerName="Rear Cargo";
 				memoryPointGunnerOptics="cargo_7_view";
 				memoryPointsGetInGunner="cargo14";
 				memoryPointsGetInGunnerDir="cargo14_dir";
@@ -2826,7 +2877,7 @@ class CfgVehicles
 			class CargoTurret_01: CargoTurret
 			{
 				proxyIndex=9;
-				gunnerName="BMP-2M_LM_Pass";
+				gunnerName="Left Middle Top";
 				gunnerCompartments="Compartment3";
 				commanding=-2;
 				gunnerAction="passenger_flatground_2";
@@ -2864,7 +2915,7 @@ class CfgVehicles
 			class CargoTurret_02: CargoTurret_01
 			{
 				proxyIndex=10;
-				gunnerName="BMP-2M_RR_Pass";
+				gunnerName="Rear Right Top";
 				gunnerAction="passenger_flatground_3";
 				memoryPointsGetInGunner="cargo10";
 				memoryPointsGetInGunnerDir="cargo10_dir";
@@ -2872,7 +2923,7 @@ class CfgVehicles
 			class CargoTurret_03: CargoTurret_01
 			{
 				proxyIndex=11;
-				gunnerName="BMP-2M_RM_Pass";
+				gunnerName="Right Middle Top";
 				gunnerAction="passenger_flatground_4";
 				memoryPointsGetInGunner="cargo11";
 				memoryPointsGetInGunnerDir="cargo11_dir";
@@ -2884,7 +2935,7 @@ class CfgVehicles
 			class CargoTurret_04: CargoTurret_01
 			{
 				proxyIndex=12;
-				gunnerName="BMP-2M_C_Pass";
+				gunnerName="Middle Top";
 				gunnerAction="passenger_boat_3";
 				memoryPointsGetInGunner="cargo12_13";
 				memoryPointsGetInGunnerDir="cargo12_13_dir";
@@ -2896,7 +2947,7 @@ class CfgVehicles
 			class CargoTurret_05: CargoTurret_01
 			{
 				proxyIndex=13;
-				gunnerName="BMP-2M_R_Pass";
+				gunnerName="Rear Top";
 				gunnerAction="rhs_bmp_cargostatic_01";
 				memoryPointsGetInGunner="cargo12_13";
 				memoryPointsGetInGunnerDir="cargo12_13_dir";
@@ -2909,7 +2960,7 @@ class CfgVehicles
 			class CargoTurret_06: CargoTurret_01
 			{
 				proxyIndex=15;
-				gunnerName="BMP-2M_RF_Pass";
+				gunnerName="Front Rear Top";
 				gunnerAction="rhs_bmp_cargostatic_02";
 				memoryPointsGetInGunner="cargo15";
 				memoryPointsGetInGunnerDir="cargo15_dir";
@@ -2921,7 +2972,7 @@ class CfgVehicles
 			class CargoTurret_07: CargoTurret_01
 			{
 				proxyIndex=16;
-				gunnerName="BMP-2M_F_Pass";
+				gunnerName="Front Top";
 				gunnerAction="rhs_bmp_cargostatic_03";
 				memoryPointsGetInGunner="cargo16";
 				memoryPointsGetInGunnerDir="cargo16_dir";
@@ -2933,7 +2984,7 @@ class CfgVehicles
 			class CargoTurret_08: CargoTurret_01
 			{
 				proxyIndex=17;
-				gunnerName="BMP-2M_FC_Pass";
+				gunnerName="Front Center Top";
 				gunnerAction="passenger_flatground_4";
 				memoryPointsGetInGunner="cargo17";
 				memoryPointsGetInGunnerDir="cargo17_dir";

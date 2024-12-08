@@ -77,7 +77,8 @@ class CfgPatches
 			"rhs_optics",
 			"rhs_c_troops",
 			"rhs_c_btr",
-			"rhs_c_bmp"
+			"rhs_c_bmp",
+			"mkk_BMP_2M"
 		};
 		name="340th MRD RHSAFRF BTR TFAR";
 		author="Scorpii";		
@@ -240,7 +241,8 @@ class CfgVehicles
 	class rhs_brm1k_tv: rhs_brm1k_vdv {};		
 	class rhs_brm1k_msv: rhs_brm1k_vdv {};		
 	class rhs_brm1k_vmf: rhs_brm1k_vdv {};		
-	class rhs_brm1k_vv: rhs_brm1k_vdv {};		
+	class rhs_brm1k_vv: rhs_brm1k_vdv {};	
+	class BMP_2M_base_Tank_F: Tank_F {};
 	
 	class rhs_btr70_vmf: rhs_btr_base {};
 	class rhs_btr70_vdv: rhs_btr70_vmf {};

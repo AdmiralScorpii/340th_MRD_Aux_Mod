@@ -1,0 +1,10 @@
+name = "Walkable Moving Objects";
+picture = "";
+hidePicture = 0;
+hideName = 0;
+author = "Bloodwyn";
+actionName = "Website";
+action = "http://steamcommunity.com/sharedfiles/filedetails/?id=903955583";
+description = "Well go ride a vehicle or smth";
+logo = "WMO_ca.paa";
+logoSmall = "WMO_ca.paa";
