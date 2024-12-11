@@ -1,0 +1,23 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "MMM_RU_TyphoonVDV"
+        },
+        {
+            "name": "Mikero",
+            "value": "DePbo.dll.9.10"
+        },
+        {
+            "name": "version",
+            "value": "23121223"
+        }
+    ]
+}

@@ -1,0 +1,16 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$",
+            "\\.txt$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "m1126_crows_j_c"
+        }
+    ]
+}

@@ -242,7 +242,10 @@ class CfgVehicles
 	class rhs_brm1k_msv: rhs_brm1k_vdv {};		
 	class rhs_brm1k_vmf: rhs_brm1k_vdv {};		
 	class rhs_brm1k_vv: rhs_brm1k_vdv {};	
-	class BMP_2M_base_Tank_F: Tank_F {};
+	class BMP_2M_base_Tank_F: Tank_F 
+	{
+		TFAR_AdditionalLR_Turret[] = {{0,0}};	
+	};
 	
 	class rhs_btr70_vmf: rhs_btr_base {};
 	class rhs_btr70_vdv: rhs_btr70_vmf {};

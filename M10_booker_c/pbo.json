@@ -1,0 +1,16 @@
+{
+    "compress": {
+        "exclude": [
+        ],
+        "include": [
+            "\\.sqf$",
+            "\\.txt$"
+        ]
+    },
+    "headers": [
+        {
+            "name": "prefix",
+            "value": "M10_booker_c"
+        }
+    ]
+}
