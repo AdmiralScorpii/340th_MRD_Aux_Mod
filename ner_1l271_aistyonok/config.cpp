@@ -2,9 +2,16 @@ class CfgPatches {
 	class ner_1l271_aistyonok {
 		name = "ner_1l271_aistyonok";
 		units[] = {
-			"ner_1l271_aistyonok"
+			"ner_1l271_aistyonok",
+			"ner_1l271_aistyonok_b",
+			"ner_1l271_aistyonok_o",
+			"ner_1l271_aistyonok_i"
 		};
-		weapons[]={};
+		weapons[]={
+			"ner_1l271_aistyonok_b",
+			"ner_1l271_aistyonok_o",
+			"ner_1l271_aistyonok_i"
+		};
 		requiredAddons[] = {
 			"A3_Data_F_AoW_Loadorder",
 			"cba_xeh"
@@ -57,7 +64,7 @@ class CfgVehicles {
 		explosionShielding=0;
 		minTotalDamageThreshold=0.5;
 		explosionEffect="FuelExplosion";
-		fuelExplosionPower=50;
+		fuelExplosionPower=0;
 		hullDamageCauseExplosion=1;
 		class DestructionEffects
 		{
@@ -85,22 +92,30 @@ class CfgVehicles {
 	class ner_1l271_aistyonok_b : ner_1l271_aistyonok_base
 	{
 		scope=2;
-		faction="BLU_T_F";
+		scopeCurator = 2;
+		faction="BLU_F";
 		side=1;			
+		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";
 		crew="B_UAV_AI";
 	};
 	class ner_1l271_aistyonok_o : ner_1l271_aistyonok_base
 	{
-		scope=2;		
+		scope=2;
+		scopeCurator = 2;
+		faction="OPF_F";		
 		side=0;
+		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";
 		crew="O_UAV_AI";
 	};	
 	class ner_1l271_aistyonok_i : ner_1l271_aistyonok_base
 	{
-		scope=2;		
+		scope=2;
+		scopeCurator = 2;
+		faction="IND_F";
 		side=2;			
+		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";		
 		crew="I_UAV_AI";
 	};	

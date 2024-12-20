@@ -5,8 +5,6 @@ NER_1l271_aistyonok_detectableClasses = [
 	"Missile",
 	"RocketCore",
 	"Rocket",
-	"GrenadeCore",
-	"Grenade",
 	"BombCore",
 	"SubmunitionCore",
 	"R_min_rf_122mm_Grad",
@@ -16,7 +14,7 @@ NER_1l271_aistyonok_detectableClasses = [
 NER_1l271_aistyonok_mapDrawingEnabled = true;
 NER_1l271_aistyonok_projectileIdCounter = 0;
 NER_1l271_aistyonok_detectedTargets = [];
-NER_1l271_aistyonok_projectileDetectionRange = 5000;
+NER_1l271_aistyonok_projectileDetectionRange = 12000;
 NER_1l271_aistyonok_detectionError = 15;
 NER_1l271_aistyonok_mapProjectilesDrawTimeout = 15;
 NER_1l271_aistyonok_markerCounter = 0;
