@@ -1,4 +1,0 @@
-//<'warbelt.pbo' properties via Mikero's dos tools, dll version 8.35>
-prefix=warbelt;
-//PboType=Arma Addon;
-//</properties>
