@@ -62,13 +62,13 @@ class CfgVehicles {
 		ejectDeadDriver=1;
 		ejectDeadCargo=1;
 		fuelCapacity=10;
-		destrType="DestructWreck";
+		destrType="DestructEngine";
 		armor=30;
 		explosionShielding=0;
 		minTotalDamageThreshold=0.5;
 		explosionEffect="FuelExplosion";
 		dammageFull[] = { "\Artilery_Radar\Textures\radar_texture_destroyed_co.paa" };
-		fuelExplosionPower=1;
+		fuelExplosionPower=0;
 		hullDamageCauseExplosion=1;
 		class DestructionEffects
 		{
@@ -99,9 +99,7 @@ class CfgVehicles {
 			"pilot"
 		};
 		memoryPointsGetInDriver="pos driver";
-		memoryPointsGetInDriverDir="pos driver dir";				
-		scope=1;		
-		side=1;		
+		memoryPointsGetInDriverDir="pos driver dir";					
 	};
 
 	class ner_1l271_aistyonok_b : ner_1l271_aistyonok_base
