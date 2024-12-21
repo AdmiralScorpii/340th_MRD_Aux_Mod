@@ -14,7 +14,7 @@ NER_1l271_aistyonok_detectableClasses = [
 NER_1l271_aistyonok_mapDrawingEnabled = true;
 NER_1l271_aistyonok_projectileIdCounter = 0;
 NER_1l271_aistyonok_detectedTargets = [];
-NER_1l271_aistyonok_projectileDetectionRange = 12000;
+NER_1l271_aistyonok_projectileDetectionRange = 8000;
 NER_1l271_aistyonok_detectionError = 15;
 NER_1l271_aistyonok_mapProjectilesDrawTimeout = 15;
 NER_1l271_aistyonok_markerCounter = 0;
@@ -215,6 +215,7 @@ NER_1l271_aistyonok_mapDrawEH = {
 };
 
 NER_1l271_aistyonok_monitorLoop = {
+	sleep 15;
 	private _allRadars = ("ner_1l271_aistyonok_b" allObjects 1) + ("ner_1l271_aistyonok_o" allObjects 1) + ("ner_1l271_aistyonok_i" allObjects 1);
 	private _friendlyRadars = _allRadars select {
 		side _x == side player;

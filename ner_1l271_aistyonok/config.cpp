@@ -14,7 +14,9 @@ class CfgPatches {
 		};
 		requiredAddons[] = {
 			"A3_Data_F_AoW_Loadorder",
-			"cba_xeh"
+			"cba_xeh",
+			"rhs_c_heavyweapons",
+			"rhs_main"
 		};
 		author = "NEREXIS";	
 	};
@@ -41,6 +43,7 @@ class CfgVehicles {
 
 	class StaticWeapon;
 
+
 	class ner_1l271_aistyonok_base : StaticWeapon
 	{
 		model = "\Artilery_Radar\artilery_radar.p3d";
@@ -64,7 +67,8 @@ class CfgVehicles {
 		explosionShielding=0;
 		minTotalDamageThreshold=0.5;
 		explosionEffect="FuelExplosion";
-		fuelExplosionPower=0;
+		dammageFull[] = { "\Artilery_Radar\Textures\radar_texture_destroyed_co.paa" };
+		fuelExplosionPower=1;
 		hullDamageCauseExplosion=1;
 		class DestructionEffects
 		{
@@ -77,6 +81,17 @@ class CfgVehicles {
 				interval=1;
 				lifeTime=5;
 			};
+		};
+		class assembleInfo
+		{
+			base="";
+			assembleTo="";
+			primary = 0;
+			dissasembleTo[]=
+			{
+				"ner_1l271_bag_base"
+			};
+			displayName="Aistyonok Radar";
 		};
 		memoryPointDriverOptics[]=
 		{
@@ -98,6 +113,17 @@ class CfgVehicles {
 		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";
 		crew="B_UAV_AI";
+		class assembleInfo
+		{
+			base="";
+			assembleTo="";
+			primary = 0;
+			dissasembleTo[]=
+			{
+				"ner_1l271_bag_b"
+			};
+			displayName="Aistyonok Radar";
+		};
 	};
 	class ner_1l271_aistyonok_o : ner_1l271_aistyonok_base
 	{
@@ -108,6 +134,17 @@ class CfgVehicles {
 		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";
 		crew="O_UAV_AI";
+		class assembleInfo
+		{
+			base="";
+			assembleTo="";
+			primary = 0;
+			dissasembleTo[]=
+			{
+				"ner_1l271_bag_o"
+			};
+			displayName="Aistyonok Radar";
+		};
 	};	
 	class ner_1l271_aistyonok_i : ner_1l271_aistyonok_base
 	{
@@ -118,5 +155,87 @@ class CfgVehicles {
 		vehicleClass = "Autonomous";
 		editorSubcategory="EdSubcat_Turrets";		
 		crew="I_UAV_AI";
+		class assembleInfo
+		{
+			base="";
+			assembleTo="";
+			primary = 0;
+			dissasembleTo[]=
+			{
+				"ner_1l271_bag_i"
+			};
+			displayName="Aistyonok Radar";
+		};
 	};	
+	
+	class Bag_Base;
+	class Weapon_Bag_Base: Bag_Base
+	{
+		class assembleInfo;
+	};	
+	class ner_1l271_bag_base: Weapon_Bag_Base
+	{
+		scopeCurator = 2;
+		scope=2;
+		mass=250;
+		displayName="1L271 Backpack";
+		model="\rhsafrf\addons\rhs_heavyweapons\bags\StaticX.p3d";
+		picture="\rhsafrf\addons\rhs_heavyweapons\bags\staticX_CA.paa";
+		icon="\rhsafrf\addons\rhs_heavyweapons\bags\mapIcon_backpack_CA.paa";
+		class assembleInfo: assembleInfo
+		{
+			primary=1;
+			base="";
+			assembleTo="ner_1l271_aistyonok_base";
+			dissasembleTo[]={};
+			displayName="Aistyonok Radar";
+		};
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+	class ner_1l271_bag_o: ner_1l271_bag_base
+	{
+		scopeCurator = 2;
+		scope=2;
+		displayName="1L271 Backpack (OPFOR)";
+		class assembleInfo
+		{
+			primary=1;
+			base="";
+			assembleTo="ner_1l271_aistyonok_o";
+			dissasembleTo[]={};
+			displayName="Aistyonok Radar";
+		};
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+	class ner_1l271_bag_b: ner_1l271_bag_base
+	{
+		scopeCurator = 2;
+		scope=2;
+		displayName="1L271 Backpack (BLUFOR)";
+		class assembleInfo
+		{
+			primary=1;
+			base="";
+			assembleTo="ner_1l271_aistyonok_b";
+			dissasembleTo[]={};
+			displayName="Aistyonok Radar";
+		};
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+	class ner_1l271_bag_i: ner_1l271_bag_base
+	{
+		scopeCurator = 2;
+		scope=2;
+		displayName="1L271 Backpack (INDFOR)";
+		class assembleInfo
+		{
+			primary=1;
+			base="";
+			assembleTo="ner_1l271_aistyonok_i";
+			dissasembleTo[]={};
+			displayName="Aistyonok Radar";
+		};
+		editorSubcategory = "EdSubcat_DismantledWeapons";
+	};
+	
 };
