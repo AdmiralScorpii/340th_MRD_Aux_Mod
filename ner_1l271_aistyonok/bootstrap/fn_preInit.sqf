@@ -215,7 +215,6 @@ NER_1l271_aistyonok_mapDrawEH = {
 };
 
 NER_1l271_aistyonok_monitorLoop = {
-	sleep 15;
 	private _allRadars = ("ner_1l271_aistyonok_b" allObjects 1) + ("ner_1l271_aistyonok_o" allObjects 1) + ("ner_1l271_aistyonok_i" allObjects 1);
 	private _friendlyRadars = _allRadars select {
 		side _x == side player;
@@ -232,7 +231,7 @@ if(hasInterface) then {
 		diag_log format[_fName + "enter"];
 		
 		waitUntil{
-			sleep 3;
+			sleep 10;
 			diag_log format[_fName + "waiting till client is loaded.."];		
 			!isNull findDisplay 46 && !(getPlayerUID player isEqualTo '');
 		};
