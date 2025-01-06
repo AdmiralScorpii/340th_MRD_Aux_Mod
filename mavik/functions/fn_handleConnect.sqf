@@ -1,5 +1,5 @@
 [] spawn {
-	private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND"];
+	private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3_CIV", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND", "mavik_3T_CIV"];
 	private _terminalsArray = ["B_UavTerminal", "O_UavTerminal", "I_UavTerminal"];
 
 	while {true} do {
@@ -38,11 +38,13 @@
 			missionNamespace setVariable ["DB_mavic_prevHud", shownHUD];
 			
 			showHUD [true, false];
+			
+			_uavConnected = getConnectedUAV _player;
 
 			waitUntil {
 				_connectedUAVType = typeOf (getConnectedUAV _player);
 				_cameraOnType = typeOf cameraOn;
-				!(_connectedUAVType in _dronesArray) || cameraView != "GUNNER" || !(_cameraOnType in _dronesArray)
+				!(_connectedUAVType in _dronesArray) || cameraView != "GUNNER" || !(_cameraOnType in _dronesArray) || !alive _uavConnected
 			};
 
 			if !(isNil "_ehId") then
@@ -58,7 +60,7 @@
 };
 
 [] spawn {
-	private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND"];
+	private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3_CIV", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND", "mavik_3T_CIV"];
 	private _signalDropTime = -1;
 
 	while {true} do {
@@ -112,7 +114,7 @@
 };
 
 [] spawn {
-    private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND"];
+    private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3_CIV", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND", "mavik_3T_CIV"];
     private _lastUAVStatus = [false, false, false];
 
     while {true} do {

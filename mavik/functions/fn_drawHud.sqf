@@ -90,8 +90,8 @@ _statusText ctrlSetText ([localize "STR_mavic_flightStatus_Flight", localize "ST
 private _vSpeedText = uiNameSpace getVariable ["DB_mavic_VSpeed_control", controlNull];
 private _hSpeedText = uiNameSpace getVariable ["DB_mavic_HSpeed_control", controlNull];
 
-_vSpeedText ctrlSetText format ["%1 %2", floor((speed _uav) / 3.6), localize "STR_mavic_metersSeconds"];
-_hSpeedText ctrlSetText format ["%1 %2", floor((velocityModelSpace _uav) # 2), localize "STR_mavic_metersSeconds"];
+_vSpeedText ctrlSetText format ["%1 %2", floor((speed _uav)), localize "STR_mavic_metersSeconds"];
+_hSpeedText ctrlSetText format ["%1 %2", localize "STR_mavic_heading", floor((direction _uav))];
 
 private _heightText = uiNameSpace getVariable ["DB_mavic_Height_control", controlNull];
 _heightText ctrlSetText format["%1 %2", floor(_uav call CBA_fnc_realHeight), localize "STR_mavic_meters"];

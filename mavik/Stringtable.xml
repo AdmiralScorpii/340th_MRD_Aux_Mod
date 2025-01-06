@@ -22,6 +22,11 @@
         <English>m</English>
         <Russian>м</Russian>
       </Key>
+	  <Key ID="STR_mavic_heading">
+        <Original>HDG</Original>
+        <English>HDG</English>
+        <Russian>HDG</Russian>
+      </Key>
 	  <Key ID="STR_mavic_metersSeconds">
         <Original>m/s</Original>
         <English>m/s</English>
