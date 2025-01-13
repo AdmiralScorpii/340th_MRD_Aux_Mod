@@ -1,6 +1,6 @@
 [] spawn {
 	private _dronesArray = ["mavik_3_OPF", "mavik_3_BLU", "mavik_3_IND", "mavik_3_CIV", "mavik_3T_OPF", "mavik_3T_BLU", "mavik_3T_IND", "mavik_3T_CIV"];
-	private _terminalsArray = ["B_UavTerminal", "O_UavTerminal", "I_UavTerminal"];
+	private _terminalsArray = ["B_UavTerminal", "O_UavTerminal", "I_UavTerminal", "C_UavTerminal"];
 
 	while {true} do {
 		private _player = missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player];

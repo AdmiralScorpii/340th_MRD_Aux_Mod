@@ -101,8 +101,8 @@ _distanceText ctrlSetText format["%1 %2", floor(_player distance _uav), localize
 
 // ZOOM
 private _zoomText = uiNameSpace getVariable ["DB_mavic_Zoom_Text", controlNull];
-private _maxFov = getNumber (configFile >> "CfgVehicles" >> (typeOf _uav) >> "PilotCamera" >> "OpticsIn" >> "Wide" >> "maxFov");
-private _zoom = floor(_maxFov/getObjectFov _uav);
+//private _zoom = floor(0.25/getObjectFov _uav);
+private _zoom = floor(0.8/getObjectFov _uav);
 _zoomText ctrlSetText format ["%1x", _zoom];
 
 if !(isNil "DB_PP_dynamic") then { DB_PP_dynamic ppEffectEnable false; };

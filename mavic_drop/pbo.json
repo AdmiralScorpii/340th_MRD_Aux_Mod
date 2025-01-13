@@ -7,9 +7,5 @@
         ]
     },
     "headers": [
-        {
-            "name": "prefix",
-            "value": "mavic_drop"
-        }
     ]
 }

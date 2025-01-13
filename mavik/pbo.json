@@ -8,9 +8,5 @@
         ]
     },
     "headers": [
-        {
-            "name": "prefix",
-            "value": "mavik"
-        }
     ]
 }

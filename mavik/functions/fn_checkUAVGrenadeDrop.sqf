@@ -1,9 +1,7 @@
 params ["_player"];
 
 private _uav = getConnectedUAV _player;
-private _connectedUAVType = typeOf _uav;
-private _cameraOnType = typeOf cameraOn;
-
-if (!isNull (_uav) && cameraOn  == _uav && { (_uav getVariable ["grenadeObj", []]) isNotEqualTo [] }) then {
-	[_player] call mavic_drop_fnc_dropGrenade;
-};
+if (isNull _uav) exitWith {};
+//private _connectedUAVType = typeOf _uav;
+//if !(_connectedUAVType isKindOf "mavic_drone_base_F") exitWith {};
+if (cameraOn == _uav) exitWith {[_player] call mavic_drop_fnc_dropGrenade;};

@@ -40,17 +40,17 @@ for "_i" from 0 to _count - 1 do {
         private _data = _control getVariable ["mavic_ui_allData", []];
         private _player = missionNamespace getVariable ["bis_fnc_moduleRemoteControl_unit", player];
 
-        _data params ["_target", "_grenade", "_grenadeMagazine", "_display"];
+        _data params ["_target", "_holder", "_grenadeMagazine", "_display"];
 
         _player addMagazineGlobal _grenadeMagazine;
 
-        private _grenades = _target getVariable ["grenadeObj", []];
+        private _grenadeObj = _target getVariable ["grenadeObj", []];
 
-        _grenades deleteAt (_grenades findIf { (typeOf _grenade) in _x });
+        _grenadeObj deleteAt (_grenadeObj findIf {_grenadeMagazine in _x});
         
-        deleteVehicle _grenade;
+        deleteVehicle _holder;
 
-        _target setVariable ["grenadeObj", _grenades, true];
+        _target setVariable ["grenadeObj", _grenadeObj, true];
 
         _display closeDisplay 1;
     }];
